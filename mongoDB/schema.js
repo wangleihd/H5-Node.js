@@ -22,15 +22,20 @@ var userSchema = new Schema({
 var User = mongoose.model('User', userSchema);
 
 var arvind = new User({
-    name : 'David',
+    name : 'John',
     age: 23,
     DOB: '01/01/1999',
     isAlive: true
 });
 
 arvind.save(function(err, data){
-
-});
-User.findOne({}, function(err, data){
+  if(err){
+    console.log(err);
+  } else {
     console.log(data);
+  }
+});
+
+User.find({}, function(err, data){
+  console.log(data);
 });

@@ -1,7 +1,9 @@
 var app = require('express')();
 var server = require('http').createServer(app);
 var io = require('socket.io').listen(server);
-app.listen(3000);
+app.listen(3000, function(){
+    console.log('Wetsite: http://localhost:3000');
+});
 
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');

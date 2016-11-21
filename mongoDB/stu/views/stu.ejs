@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <h3><%= h1%></h3>
+    <hr>
+    <div id="info">
+        <% studb.forEach(function(studb){ %>
+            <p><strong>Name:</strong><%= studb.name %></p>
+            <p><strong>Age:</strong><%= studb.age %></p>
+            <p><strong>Email:</strong><%= studb.email %></p>
+            <p><strong>tel:</strong><%= studb.tel %></p>
+            <hr>
+        <% }); %>
+    </div>
+
+  </body>
+</html>

@@ -16,12 +16,12 @@ app.get('/', function (req, res){
 	res.render('index', {name: 'express'});
 });
 
-app.post('/about', function(req, res) {
+app.get('/about', function(req, res) {
   var info = [{name: 'Mary', age: 20},
   {name: 'Ben', age: 32},
   {name: 'Scotch', age: 21}
 ];
-console.log(req.body);
+console.log(req.query.name);
 	res.render('about', {
     info: info,
     title: "Information"
